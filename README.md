@@ -1,4 +1,4 @@
-# Estudo angular, baseado no tutorial angula Thour of Heroes. UI Angular Material.
+# Estudo angular, baseado no tutorial angular Thour of Heroes. UI Angular Material.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
