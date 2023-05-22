@@ -4,8 +4,8 @@ import { HeroisComponent } from './components/herois/herois.component';
 import { HeroDatailComponent } from './components/hero-datail/hero-datail.component';
 
 const routes: Routes = [
-  { path: "herois", component: HeroisComponent },
-  { path: "herois/:id", component: HeroDatailComponent },
+  { path: "", component: HeroisComponent },
+  { path: ":id", component: HeroDatailComponent },
 
 ];
 

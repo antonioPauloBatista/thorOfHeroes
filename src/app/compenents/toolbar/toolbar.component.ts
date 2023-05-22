@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { MenuItem } from '../../models/menu-item.model';
+import { MenuItem } from 'src/app/models/menu-item.model';
+
+
 
 @Component({
   selector: 'app-toolbar',

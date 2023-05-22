@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Herois } from '../../../core/models/herois.model';
-import { HeroService } from '../../../core/service/hero.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
+import { Herois } from 'src/app/models/herois.model';
+import { HeroService } from 'src/app/service/hero.service';
 
 @Component({
   selector: 'app-hero-datail',
