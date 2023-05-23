@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
   { path: "", redirectTo: "/dashboard", pathMatch: 'full' },
-  { path: "dashboard", loadChildren: () => import('./compenents/dashboard/dashboard.module').then((m) => m.DashboardModule) },
-  { path: "herois", loadChildren: () => import('./compenents/herois/herois.module').then((m) => m.HeroisModule) },
+  { path: "dashboard", loadChildren: () => import('./components/dashboard/dashboard.module').then((m) => m.DashboardModule) },
+  { path: "herois", loadChildren: () => import('./components/herois/herois.module').then((m) => m.HeroisModule) },
+  { path: "**", component: PageNotFoundComponent },
 
 
 

@@ -64,7 +64,8 @@
               "browserTarget": "teste-hero:build:production"
             },
             "development": {
-              "browserTarget": "teste-hero:build:development"
+              "browserTarget": "teste-hero:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

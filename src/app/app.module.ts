@@ -4,10 +4,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DashboardModule } from './compenents/dashboard/dashboard.module';
-import { HeroisModule } from './compenents/herois/herois.module';
-import { MessageModule } from './compenents/message/message.module';
-import { ToolbarModule } from './compenents/toolbar/toolbar.module';
+import { MessageModule } from './components/message/message.module';
+import { ToolbarModule } from './components/toolbar/toolbar.module';
+import { PageNotFoundModule } from './components/page-not-found/page-not-found.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { ToolbarModule } from './compenents/toolbar/toolbar.module';
   ],
   imports: [
 
-
+    HttpClientModule,
     //CommonModule,
     BrowserModule,
     //FormsModule,
@@ -26,7 +27,8 @@ import { ToolbarModule } from './compenents/toolbar/toolbar.module';
     // DashboardModule,
     // HeroisModule,
     MessageModule,
-    ToolbarModule
+    ToolbarModule,
+    PageNotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
