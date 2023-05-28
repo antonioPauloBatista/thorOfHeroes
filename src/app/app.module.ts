@@ -7,7 +7,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MessageModule } from './components/message/message.module';
 import { ToolbarModule } from './components/toolbar/toolbar.module';
 import { PageNotFoundModule } from './components/page-not-found/page-not-found.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { LoadingModule } from './components/loading/loading.module';
+import { LoadingInterceptor } from './iterceptors/loading.interceptor';
+
 
 
 
@@ -28,9 +31,14 @@ import { HttpClientModule } from '@angular/common/http';
     // HeroisModule,
     MessageModule,
     ToolbarModule,
-    PageNotFoundModule
+    PageNotFoundModule,
+    LoadingModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoadingInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
